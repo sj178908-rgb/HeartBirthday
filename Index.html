@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Special Someone ❤️</title>
+    <meta charset="utf-8">
+    <link href="css/default.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/garden.js"></script>
+    <script src="js/functions.js"></script>
+</head>
+<body>
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+                <span class="comments">/**</span><br />
+                <span class="space"/><span class="comments">* Aaj ka din khaas hai...</span><br />
+                <span class="space"/><span class="comments">* Kyun ki tum mere saath ho.</span><br />
+                <span class="space"/><span class="comments">*/</span><br />
+                Boy i = <span class="keyword">new</span> Boy(<span class="string">"Sumit"</span>);<br />
+                Girl u = <span class="keyword">new</span> Girl(<span class="string">"Rashmi"</span>);<br />
+                <span class="comments">// Hamara safar 9 April 2004 se shuru hua. </span><br />
+                i.love(u);<br />
+                u.accepted();<br />
+                <span class="keyword">while</span> (true) {<br />
+                <span class="placeholder"/>i.miss(u);<br />
+                <span class="placeholder"/>i.takeCareOf(u);<br />
+                <span class="placeholder"/><span class="keyword">is</span> Happy = <span class="keyword">true</span>;<br />
+                }<br />
+                <span class="comments">// Ek waada hamesha ke liye.</span><br />
+                i.marry(u);<br />
+                <br>
+                <span class="string">"I Love You Forever"</span>;
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        Rashmi, we are together for
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        Love you hamesha.<br/>
+                        <div class="signature">- @mr_sumit__jatav</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        var together = new Date();
+        together.setFullYear(2004, 3, 9); 
+        together.setHours(0); together.setMinutes(0); together.setSeconds(0); together.setMilliseconds(0);
+
+        if (!document.createElement('canvas').getContext) {
+            $("#code").css("display", "none");
+        } else {
+            setTimeout(function () { startHeartAnimation(); }, 5000);
+            timeElapse(together);
+            setInterval(function () { timeElapse(together); }, 500);
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+</body>
+                </html>
+                        
